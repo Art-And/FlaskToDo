@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+
+{% block title  %}
+    {{ super() }}
+    Oh! no. :(
+{% endblock %}
+
+{% block content %}
+    <h1>Dont find: {{ user_ip }} sorry brou </h1>
+{% endblock %}
