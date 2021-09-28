@@ -1,6 +1,4 @@
-from flask import Flask, request
-from flask.helpers import make_response
-from werkzeug.utils import redirect
+from flask import Flask, request, make_response, redirect, render_template
 
 app = Flask(__name__)
 
@@ -9,7 +7,7 @@ app = Flask(__name__)
 def hello():
     user_ip = request.remote_addr
 
-    return f'Hello your IP is: {user_ip}'
+    return render_template('hello.html', user_ip=user_ip)
 
 
 @app.route('/')
