@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
-{% import 'macros.html' as macros %}
-
-{% block title  %}
-    {{ super() }}
-    Oh! no. :(
+{% block title %}
+{{ super() }}
+    404
 {% endblock %}
 
 {% block content %}
-    <h1>Dont find: {{ user_ip }} sorry brou </h1>
+    <h1>Lo sentimos no encontramos lo que buscabas</h1>
+    <p>{{ error }}</p>
 {% endblock %}
